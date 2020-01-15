@@ -18,8 +18,12 @@ Then f(arr1,arr2) should return array([[ 1. ,  2. ,  3.5,  4. ],
                                        [ 0.5, -1. , -1. , -1. ],
                                        [ 2. , 11. , -3. , -2.4]])
 """
+def flmt(arr,r,num):
+    return(arr[arr[:,r]>num, :])
+
 
 def f(arr1, arr2):
-    ##########YOUR CODE HERE##########
-    pass
-    ###########END CODE###############
+    a1 = flmt(arr1,0,0)
+    a2 = flmt(arr2,0,0)
+
+    np.concatenate([a1,a2])
