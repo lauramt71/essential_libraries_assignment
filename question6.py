@@ -18,5 +18,15 @@ Then, f(path) should return the dataframe,
 """
 def f(path):
     ##########YOUR CODE HERE##########
-    pass
+    df = pd.read_csv(path,delimiter=' ',header=None)
+
+    # Make header columns
+    cl = []
+    for i in range(len(df.columns)):
+        cl.append('column_' + str(i+1))
+
+    df.columns = cl
+
+    return df
+
     ###########END CODE###############
