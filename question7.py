@@ -19,5 +19,11 @@ file in this repo called testdf7.csv. Loading this dataframe into memory and run
 """
 def f(df):
     ##########YOUR CODE HERE##########
-    pass
+    df1 = df.copy()
+
+    df1['col_1'] = df['col_1'].replace(np.nan, df['col_1'].mean())
+
+    df1 = df1.dropna(subset=['col_2'])
+
+    return df1
     ###########END CODE###############
