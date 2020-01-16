@@ -7,7 +7,7 @@ Write a function that takes a pandas dataframe, df as input. df is assumed to ha
 has the rows in df that satisfy at least one of the two conditions: The col_1 entry is a multiple of 3, or the col_2 entry is greater than 6. The general syntax
 for subsetting a dataframe based on multiple conditions is df[(condition1) | (condition2)]. Replace the "|" with "&" depending on whether you want the rows that
 satisfy any of the conditions or you want the rows to satisfy both (all) the conditions. "|" means OR and "&" means AND. There is a csv file called testdf8.csv.
-Loading this as a dataframe and running f(df) should return 
+Loading this as a dataframe and running f(df) should return
 
    col_1  col_2
 1      3      4
@@ -18,5 +18,8 @@ Loading this as a dataframe and running f(df) should return
 """
 def f(df):
     ##########YOUR CODE HERE##########
-    pass
+    df1 = df[(df['col_1']%3==0)| (df['col_2']>6)]
+
+    return df1
+
     ###########END CODE###############
