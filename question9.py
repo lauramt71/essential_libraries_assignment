@@ -17,5 +17,12 @@ dataframe and running f(df) should return
 """
 def f(df):
     ##########YOUR CODE HERE##########
-    pass
+    def w_cnt(s):
+        if (s.count(' ')+s.count(',')) >= 10:
+            return True
+        else:
+            return False
+
+    return df[df['text'].apply(w_cnt)]
+
     ###########END CODE###############
