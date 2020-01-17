@@ -19,5 +19,9 @@ df1 and the second file as df2 and running f(df1, df2) should return
 """
 def f(df1, df2):
     ##########YOUR CODE HERE##########
-    pass
+    df1 = pd.read_csv('testdf10_1.csv')
+    df2 = pd.read_csv('testdf10_2.csv')
+
+    return pd.merge(df1,df2,how='inner')
+
     ###########END CODE###############
